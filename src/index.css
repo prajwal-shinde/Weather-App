@@ -6,6 +6,7 @@
   font-family: "Josefin Sans", sans-serif;
 }
 body {
+  overflow-x: hidden;
 }
 .main {
   background-color: rgb(216, 212, 212);
@@ -37,6 +38,7 @@ body {
   left: 370px;
   top: 0px;
 }
+
 .child3 {
   display: flex;
   flex-direction: row;
@@ -44,7 +46,6 @@ body {
   left: 390px;
   top: 290px;
   bottom: 220px;
-  
 }
 .child4 {
   display: flex;
@@ -53,10 +54,48 @@ body {
   left: 390px;
   top: 510px;
   bottom: 10px;
-  
 }
 .text_align {
   position: absolute;
   left: 390px;
   top: 325px;
+}
+
+@media(max-width:700px){
+  body{
+    overflow-x: hidden;
+  }
+  .main {
+    background-color: rgb(216, 212, 212);
+    height: auto;
+    width: 100%;
+   
+  }
+  .child {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .child2 {
+    display: block;
+    
+   
+  }
+  .card{
+    width: 100%;
+  }
+  .child3 {
+    display: block;
+    flex-direction: column;
+ 
+  }
+  .child4 {
+    display: block;
+    flex-direction: column;
+    
+  }
+  .align1{
+    display: block;
+  }
 }

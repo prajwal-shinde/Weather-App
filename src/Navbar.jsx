@@ -93,16 +93,15 @@ const Navbar = () => {
   const fetchAirApi = async () => {
     const api3 = await fetch(
       `http://api.openweathermap.org/data/2.5/air_pollution?lat=${Lat}&lon=${Lon}&appid=715b9a70eab9b1f4e50ffac2b26eba39`
-    ).then(async()=>{
-      const res_api3 = await api3.json();
-      setAirQuality(res_api3.list[0].main.aqi);
-      console.log(res_api3);
-    }).catch(()=>{
-      return "Please wait something went wrong....";
-    });
-   
-  
-    
+    )
+      .then(async () => {
+        const res_api3 = await api3.json();
+        setAirQuality(res_api3.list[0].main.aqi);
+        console.log(res_api3);
+      })
+      .catch(() => {
+        return "Please wait something went wrong....";
+      });
   };
   const fetchApi = async (event) => {
     event.preventDefault();
@@ -141,96 +140,97 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="main">
-        <div className="child">
-          <div
-            className="card shadow shadow-lg bg-light mb-5"
-            style={{ width: "23rem", height: "100vh" }}
-          >
-            <form className="d-flex m-3 px-1 ">
-              <i className="fa fa-search pt-3 pr-1 pb-3"></i>
-              <input
-                id="i1"
-                className="shadow-none text-dark form-control pr-2 mr-4 bg-light pt-2"
-                type="search"
-                placeholder="Search for cities..."
-                aria-label="Search"
-                onChange={(event) => {
-                  setLocation(event.target.value);
-                }}
-              />
-              <button
-                className="btn btn-primary"
-                type="submit"
-                onClick={fetchApi}
-              >
-                Search
-              </button>
-            </form>
-            <div className="card-body">
-              <h1>
-                <strong>{City_name}</strong>
-              </h1>
+      <div
+        className="col-sm-12"
+        style={{ backgroundColor: "rgb(216, 212, 212)" }}
+      >
+        <div className="row">
+          <div className="col-sm-3">
+            <div className="card shadow shadow-lg bg-light mb-5 h-100 w-100">
+              <form className="d-flex m-3 px-1 ">
+                <i className="fa fa-search pt-3 pr-1 pb-3"></i>
+                <input
+                  id="i1"
+                  className="shadow-none text-dark form-control pr-2 mr-4 bg-light pt-2"
+                  type="search"
+                  placeholder="Search for cities..."
+                  aria-label="Search"
+                  onChange={(event) => {
+                    setLocation(event.target.value);
+                  }}
+                />
+                <button
+                  className="btn btn-primary"
+                  type="submit"
+                  onClick={fetchApi}
+                >
+                  Search
+                </button>
+              </form>
+              <div className="card-body">
+                <h1>
+                  <strong>{City_name}</strong>
+                </h1>
 
-              <img
-                src={Image}
-                className="img-fluid mb-0 mt-0"
-                alt="Network Issue"
-              />
-              <h1 style={{ fontSize: "3.5rem" }}>
-                {Math.round(x.toFixed(2))}°C
-              </h1>
-              <h3>
-                <strong>
-                  <Moment format="dddd">{Day}</Moment>
-                </strong>
+                <img
+                  src={Image}
+                  className="img-fluid mb-0 mt-0"
+                  alt="Network Issue"
+                />
+                <h1 style={{ fontSize: "3.5rem" }}>
+                  {Math.round(x.toFixed(2))}°C
+                </h1>
+                <h3>
+                  <strong>
+                    <Moment format="dddd">{Day}</Moment>
+                  </strong>
 
-                <span className="ml-3" style={{ color: grey }}>
-                  <Moment interval={1000} format="LTS"></Moment>
+                  <span className="ml-3" style={{ color: grey }}>
+                    <Moment interval={1000} format="LTS"></Moment>
+                  </span>
+                </h3>
+                <hr />
+
+                <span className="d-flex">
+                  <i
+                    className="fa fa-cloud fa-2x"
+                    aria-hidden="true"
+                    style={{ color: "grey" }}
+                  ></i>
+
+                  <Typography>
+                    <strong className="ml-3">{Main}</strong>
+                  </Typography>
                 </span>
-              </h3>
-              <hr />
 
-              <span className="d-flex">
-                <i
-                  className="fa fa-cloud fa-2x"
-                  aria-hidden="true"
-                  style={{ color: "grey" }}
-                ></i>
-
-                <Typography>
-                  <strong>{Main}</strong>
-                </Typography>
-              </span>
-
-              <span className="d-flex mt-3">
-                <i
-                  className="fa fa-tint fa-2x ml-2"
-                  aria-hidden="true"
-                  style={{ color: "skyblue" }}
-                ></i>
-                &nbsp;&nbsp;
-                <Typography className="ml-2">
-                  <strong>{Description}</strong>
-                </Typography>
-              </span>
+                <span className="d-flex mt-3">
+                  <i
+                    className="fa fa-tint fa-2x ml-2"
+                    aria-hidden="true"
+                    style={{ color: "skyblue" }}
+                  ></i>
+                  &nbsp;&nbsp;
+                  <Typography className="ml-2">
+                    <strong className="ml-2">{Description}</strong>
+                  </Typography>
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="child2 justify-content-evenly">
-          <Dashboard day={NewDay} max={Math.round(y2.toFixed(2))} />
+          <div className="col-sm-9">
+            <div className="row">
+            <Dashboard day={NewDay} max={Math.round(y2.toFixed(2))} />
           <Dashboard day={day2} max={Math.round(y3.toFixed(2))} />
           <Dashboard day={day3} max={Math.round(y3.toFixed(2))} />
           <Dashboard day={day4} max={Math.round(y4.toFixed(2))} />
           <Dashboard day={day5} max={Math.round(y5.toFixed(2))} />
-        </div>
-        <div className="child3">
-          <Highlights title="UV Index" data={Uv} img={speedometer} />
+            </div>
+            <div className="row d-flex justify-content-evenly">
+            <Highlights title="UV Index" data={Uv} img={speedometer} />
           <WindStatus title="Wind Status" data={windstatus} />
           <Sunset title="Sunrise & Sunset" data={sunrise} data2={sunset} />
         </div>
-        <div className="child4">
+        <div className="row d-flex justify-content-evenly mb-3">
           <Humidity title="Humidity" data={humidity} />
           <Visiblity title="Visiblity" data={visiblity} />
           <AirQuality
@@ -238,6 +238,8 @@ const Navbar = () => {
             data={airquality}
             air_status={status}
           />
+            </div>
+          </div>
         </div>
       </div>
     </>

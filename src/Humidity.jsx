@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import hygrometer from "../src/images/hygrometer.svg";
-const Humidity = (props) =>{
-    return(
-        <>
- <div
+const Humidity = (props) => {
+  return (
+    <>
+      <div
         className="card mt-5 ml-2 mr-3"
         style={{ width: "23rem", borderRadius: "15px" }}
       >
@@ -20,12 +20,13 @@ const Humidity = (props) =>{
               alt="Error"
               style={{ height: "90px" }}
             />
-            <h1 style={{ fontSize: "4rem", fontWeight: "bold" }}>{props.data} %</h1>
+            <h1 style={{ fontSize: "4rem", fontWeight: "bold" }}>
+              {props.data} %
+            </h1>
           </span>
-          
         </div>
       </div>
-        </>
-    );
-}
+    </>
+  );
+};
 export default Humidity;
