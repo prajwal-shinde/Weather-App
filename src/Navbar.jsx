@@ -41,7 +41,7 @@ const Navbar = () => {
   const [temp2, setTemp2] = useState();
   const [temp3, setTemp3] = useState();
   const [temp4, setTemp4] = useState();
-  const [temp5, setTemp5] = useState();
+  // const [temp5, setTemp5] = useState();
   const [day2, setDay2] = useState();
   const [day3, setDay3] = useState();
   const [day4, setDay4] = useState();
@@ -132,7 +132,7 @@ const Navbar = () => {
     setTemp_max(resJson.list[6].main.temp_max);
     setTemp3(resJson.list[18].main.temp_max);
     setTemp4(resJson.list[26].main.temp_max);
-    setTemp5(resJson.list[34].main.temp_max);
+    // setTemp5(resJson.list[34].main.temp_max);
     setDay2(resJson.list[10].dt_txt);
     setDay3(resJson.list[18].dt_txt);
     setDay4(resJson.list[26].dt_txt);
@@ -217,20 +217,20 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="col-sm-9">
-            <div className="row">
+          <div  className="col-sm-9">
+            <div id="row1" className="row">
             <Dashboard day={NewDay} max={Math.round(y2.toFixed(2))} />
           <Dashboard day={day2} max={Math.round(y3.toFixed(2))} />
           <Dashboard day={day3} max={Math.round(y3.toFixed(2))} />
           <Dashboard day={day4} max={Math.round(y4.toFixed(2))} />
           <Dashboard day={day5} max={Math.round(y5.toFixed(2))} />
             </div>
-            <div className="row d-flex justify-content-evenly">
+            <div id="row2" className="row d-flex justify-content-evenly">
             <Highlights title="UV Index" data={Uv} img={speedometer} />
           <WindStatus title="Wind Status" data={windstatus} />
           <Sunset title="Sunrise & Sunset" data={sunrise} data2={sunset} />
         </div>
-        <div className="row d-flex justify-content-evenly mb-3">
+        <div id="row3" className="row d-flex justify-content-evenly mb-3 ">
           <Humidity title="Humidity" data={humidity} />
           <Visiblity title="Visiblity" data={visiblity} />
           <AirQuality

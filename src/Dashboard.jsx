@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from "react";
-import sun_cloudy from "../src/images/cloudy.svg";
 import Moment from 'react-moment';
 import Sunny from "../src/images/sunny.svg";
 import Cold from "../src/images/cold.svg";
@@ -21,7 +20,7 @@ const Dashboard = (props) => {
   }, [props.max]);
   return (
     <>
-      <div className="d-flex card ml-3 mt-3 mr-3" style={{ width: "12rem", height: "40vh" ,borderRadius:"15px"}}>
+      <div className="d-flex card ml-3 mt-3 mr-3" style={{ width: "13rem", height: "40vh" ,borderRadius:"15px"}}>
         <div className="card-body">
           <h3 className="text-center"><Moment format="dddd">{props.day}</Moment></h3>
           <img src={img} className="img-fluid" alt="Error"/>

@@ -65,6 +65,20 @@ body {
   body{
     overflow-x: hidden;
   }
+  #row1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  #row2{
+   margin-left: 1rem;
+   margin-right: 1rem;
+  }
+  #row3{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
   .main {
     background-color: rgb(216, 212, 212);
     height: auto;
