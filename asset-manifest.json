@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/Weather-App/static/css/main.57196320.chunk.css",
+    "main.js": "/Weather-App/static/js/main.24bb03be.chunk.js",
+    "main.js.map": "/Weather-App/static/js/main.24bb03be.chunk.js.map",
+    "runtime-main.js": "/Weather-App/static/js/runtime-main.efef36f2.js",
+    "runtime-main.js.map": "/Weather-App/static/js/runtime-main.efef36f2.js.map",
+    "static/css/2.f7f0f1e4.chunk.css": "/Weather-App/static/css/2.f7f0f1e4.chunk.css",
+    "static/js/2.06ba9ad6.chunk.js": "/Weather-App/static/js/2.06ba9ad6.chunk.js",
+    "static/js/2.06ba9ad6.chunk.js.map": "/Weather-App/static/js/2.06ba9ad6.chunk.js.map",
+    "index.html": "/Weather-App/index.html",
+    "static/css/2.f7f0f1e4.chunk.css.map": "/Weather-App/static/css/2.f7f0f1e4.chunk.css.map",
+    "static/css/main.57196320.chunk.css.map": "/Weather-App/static/css/main.57196320.chunk.css.map",
+    "static/js/2.06ba9ad6.chunk.js.LICENSE.txt": "/Weather-App/static/js/2.06ba9ad6.chunk.js.LICENSE.txt",
+    "static/media/barometer.54a2d16b.svg": "/Weather-App/static/media/barometer.54a2d16b.svg",
+    "static/media/cloudy.c99703e0.svg": "/Weather-App/static/media/cloudy.c99703e0.svg",
+    "static/media/cold.92a07231.svg": "/Weather-App/static/media/cold.92a07231.svg",
+    "static/media/font-awesome.min.css": "/Weather-App/static/media/fontawesome-webfont.f691f37e.woff",
+    "static/media/hygrometer.668f528d.svg": "/Weather-App/static/media/hygrometer.668f528d.svg",
+    "static/media/mist.fba674b8.svg": "/Weather-App/static/media/mist.fba674b8.svg",
+    "static/media/sunny.137e9c17.svg": "/Weather-App/static/media/sunny.137e9c17.svg",
+    "static/media/sunrise.650ce443.svg": "/Weather-App/static/media/sunrise.650ce443.svg",
+    "static/media/sunset.d2f4d418.svg": "/Weather-App/static/media/sunset.d2f4d418.svg",
+    "static/media/verycold.4892e669.svg": "/Weather-App/static/media/verycold.4892e669.svg",
+    "static/media/veryhot.8a081d83.svg": "/Weather-App/static/media/veryhot.8a081d83.svg",
+    "static/media/weather.510cc048.svg": "/Weather-App/static/media/weather.510cc048.svg",
+    "static/media/wind.688d4a74.svg": "/Weather-App/static/media/wind.688d4a74.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.efef36f2.js",
+    "static/css/2.f7f0f1e4.chunk.css",
+    "static/js/2.06ba9ad6.chunk.js",
+    "static/css/main.57196320.chunk.css",
+    "static/js/main.24bb03be.chunk.js"
+  ]
+}
