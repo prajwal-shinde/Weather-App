@@ -82,7 +82,7 @@ const Navbar = () => {
 
   const fetchUVApi = async () => {
     const res = await fetch(
-      `http://api.openweathermap.org/data/2.5/uvi?lat=${Lat}&lon=${Lon}&appid=715b9a70eab9b1f4e50ffac2b26eba39`
+      `https://api.openweathermap.org/data/2.5/uvi?lat=${Lat}&lon=${Lon}&appid=715b9a70eab9b1f4e50ffac2b26eba39`
     );
     const resjson2 = await res.json();
 
@@ -92,7 +92,7 @@ const Navbar = () => {
   };
   const fetchAirApi = async () => {
     const api3 = await fetch(
-      `http://api.openweathermap.org/data/2.5/air_pollution?lat=${Lat}&lon=${Lon}&appid=715b9a70eab9b1f4e50ffac2b26eba39`
+      `https://api.openweathermap.org/data/2.5/air_pollution?lat=${Lat}&lon=${Lon}&appid=715b9a70eab9b1f4e50ffac2b26eba39`
     )
       .then(async () => {
         const res_api3 = await api3.json();
@@ -106,7 +106,7 @@ const Navbar = () => {
   const fetchApi = async (event) => {
     event.preventDefault();
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/forecast?q=${Location}&appid=715b9a70eab9b1f4e50ffac2b26eba39`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${Location}&appid=715b9a70eab9b1f4e50ffac2b26eba39`
     );
 
     fetchUVApi();
